@@ -2,6 +2,7 @@ I'm trying to get my build to work with Paketo's pipenv-install buildpack.
 
 I can build this app and run it in a docker container fine with just the pipfile + Python 3.11 base:
 ```shell
+# Run in example-app folder
 # requires nvidia gpu
 docker build -t test .
 docker run --gpus all test 
@@ -10,6 +11,7 @@ docker run --gpus all test
 
 I can build the pipenv example project fine and execute it.  But as soon as I introduce my pipenv + lockfile I get:
 ```shell
+# Run in example-app folder
 # Output by: pack build test
 Paketo Buildpack for CPython 1.13.0
   Resolving CPython version
